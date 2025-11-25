@@ -8,6 +8,8 @@ function myfunc(event) {
     var inputCity = document.getElementById("inputCity").value;
     var inputZip = document.getElementById("inputZip").value;
 
+    console.log("first name is "+inputFirstName);
+
     localStorage.setItem("inputFirstName",inputFirstName);
     localStorage.setItem("inputLastName",inputLastName);
     localStorage.setItem("inputAddress",inputAddress);
@@ -15,7 +17,10 @@ function myfunc(event) {
     localStorage.setItem("inputCity",inputCity);
     localStorage.setItem("inputZip",inputZip);
 
+    
 
 }
     const form = document.querySelector("form");
     form.addEventListener("submit",myfunc);
+
+    

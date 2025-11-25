@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(#e66465, #9198e5);
+  background-attachment: fixed;
+}
+
+.container {
+  width: 50%;
+  background-color: white;
+  padding: 4rem;
+  position: absolute;
+  top: 10%;
+  left: 25%;
+  border-radius: 2rem;
+}
+
+form .col-md-6,
+form .col-md-2,
+form .col-12 {
+  margin-bottom: 1rem;
+}
+
+/* responsive  */
+@media (max-width: 600px) {
+  .container {
+    padding: 1.5rem;
+    border-radius: 1rem;
+  }
+}
+

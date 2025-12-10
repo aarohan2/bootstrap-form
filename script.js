@@ -1,26 +1,36 @@
 function myfunc(event) {
-    event.preventDefault();
+  event.preventDefault();
 
-    var inputFirstName = document.getElementById("inputFirstName").value;
-    var inputLastName = document.getElementById("inputLastName").value;
-    var inputAddress = document.getElementById("inputAddress").value;
-    var inputDescription = document.getElementById("inputDescription").value;
-    var inputCity = document.getElementById("inputCity").value;
-    var inputZip = document.getElementById("inputZip").value;
+  var inputFName = document.getElementById("inputFirstName").value;
+  var inputLName = document.getElementById("inputLastName").value;
+  var inputAdd = document.getElementById("inputAddress").value;
+  var inputDesc = document.getElementById("inputDescription").value;
+  var inputC = document.getElementById("inputCity").value;
+  var inputZ = document.getElementById("inputZip").value;
 
-    console.log("first name is "+inputFirstName);
+  console.log("first name is " + inputFName);
 
-    localStorage.setItem("inputFirstName",inputFirstName);
-    localStorage.setItem("inputLastName",inputLastName);
-    localStorage.setItem("inputAddress",inputAddress);
-    localStorage.setItem("inputDescription",inputDescription);
-    localStorage.setItem("inputCity",inputCity);
-    localStorage.setItem("inputZip",inputZip);
-
+  localStorage.setItem("inputFirstName", inputFName);
+  localStorage.setItem("inputLastName", inputLName);
+  localStorage.setItem("inputAddress", inputAdd);
+  localStorage.setItem("inputDescription", inputDesc);
+  localStorage.setItem("inputCity", inputC);
+  localStorage.setItem("inputZip", inputZ);
     
+//   Storing in table 
+  var tablebody = document.querySelector(" tbody");
+  var tablerow = document.createElement("tr");
+  let rownumber = tablebody.querySelectorAll("tr").length + 1;
 
+  tablerow.innerHTML = `<th scope="col">${rownumber}</th>
+    <td>${inputFName}</td>
+    <td>${inputLName}</td>
+    `;
+
+  tablebody.appendChild(tablerow);
 }
-    const form = document.querySelector("form");
-    form.addEventListener("submit",myfunc);
+const form = document.querySelector("form");
+form.addEventListener("submit", myfunc);
 
-    
+
+

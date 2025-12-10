@@ -14,9 +14,7 @@ body {
   width: 50%;
   background-color: white;
   padding: 4rem;
-  position: absolute;
-  top: 10%;
-  left: 25%;
+  margin: 5rem auto;
   border-radius: 2rem;
 }
 
@@ -34,3 +32,21 @@ form .col-12 {
   }
 }
 
+.tables {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 5rem;
+}
+
+.table_container {
+  width: 50%;
+  background-color: white;
+  padding: 4rem;
+  border-radius: 2rem;
+}
+
+@media (max-width: 600px) {
+  .table_container {
+    width: 90%;
+  }
+}
